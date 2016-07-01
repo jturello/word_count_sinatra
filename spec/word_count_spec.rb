@@ -7,4 +7,8 @@ describe('String#word_count') do
     expect(("word").word_count("word")).to(eq(1))
   end
 
+  it('returns 0 when word (=word) is not found in text (=text)') do
+    expect(("text").word_count("word")).to eq(0)
+  end
+
 end
