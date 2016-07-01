@@ -15,4 +15,8 @@ describe('String#word_count') do
     expect(("breakneck").word_count("break")).to eq(0)
   end
 
+  it('returns 1 when word being counted (=word) only differs by capitalization from word in text (=Word)') do
+    expect(("Word of the month club").word_count("word")).to eq(1)
+  end
+
 end
