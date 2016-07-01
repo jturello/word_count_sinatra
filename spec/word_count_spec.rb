@@ -11,7 +11,7 @@ describe('String#word_count') do
     expect(("text").word_count("word")).to eq(0)
   end
 
-  it('returns 0 when word being counted (=break) if only found as a substring in text (=breakneck)') do
+  it('returns 0 when word being counted (=break) is only found as a substring in text (=breakneck)') do
     expect(("breakneck").word_count("break")).to eq(0)
   end
 

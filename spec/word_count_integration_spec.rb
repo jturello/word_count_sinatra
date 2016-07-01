@@ -3,12 +3,23 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('STRING#word_count', {:type => :feature}) do
-  it('DOES SOMETHING...') do
+describe("word_count homepage form input behavior", {:type => :feature}) do
+
+  it("displays text 'Welcome to Word Count' on form input homepage result - 1 occurrence of word - when user enters the same word (case insensitive) in text and word to count fields") do
     visit('/')
-    fill_in('TEMPLATE', :with => 'SOMETHING')
-    click_button('Enter')
+    # fill_in('text', :with => 'SOMETHING')
+    # fill_in('word_to_count', :with => 'sOmEtHiNg')
+    # click_button('Enter')
     # save_and_open_page
-    expect(page).to have_content('SOME RESULT')
+    expect(page).to have_content('Welcome to Word Count')
   end
+
+  # it('displays result - 1 occurrence of word - when user enters the same word (case insensitive) in text and word to count fields') do
+  #   visit('/')
+  #   fill_in('text', :with => 'SOMETHING')
+  #   fill_in('word_to_count', :with => 'sOmEtHiNg')
+  #   click_button('Enter')
+  #   # save_and_open_page
+  #   expect(page).to have_content('Number of occurrences of word-to-count in text: 1')
+  # end
 end
