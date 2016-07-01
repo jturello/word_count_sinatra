@@ -20,8 +20,15 @@ describe("word_count form input homepage", {:type => :feature}) do
     fill_in('text', :with => 'SOMETHING')
     fill_in('word_to_count', :with => 'sOmEtHiNg')
     click_button('Enter')
-    # save_and_open_page
     expect(page).to have_content('Occurrences of word in text: 1')
+  end
+
+  it('displays correct count when multiple occurrences of word (in this test, 2) exist in text') do
+    visit('/')
+    fill_in('text', :with => "Like, you're not likely to like this dormitory-like life we lead here.")
+    fill_in('word_to_count', :with => 'like')
+    click_button('Enter')
+    expect(page).to have_content('Occurrences of word in text: 2')
   end
 
 end
