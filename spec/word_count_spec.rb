@@ -19,4 +19,8 @@ describe('String#word_count') do
     expect(("Word of the month club").word_count("word")).to eq(1)
   end
 
+  it('returns 0 if word being counted (=term) only appears as part of a hyphenated compound word in text (=near-term)') do
+    expect(("near-term").word_count("term")).to eq(0)
+  end
+
 end
