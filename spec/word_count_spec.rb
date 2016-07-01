@@ -1,14 +1,10 @@
-require('capybara/rspec')
-require('./app')
-Capybara.app = Sinatra::Application
-set(:show_exceptions, false)
+require('rspec')
+require('word_count')
 
-describe('STRING#TEMPLATE', {:type => :feature}) do
-  it('DOES SOMETHING...') do
-    visit('/')
-    fill_in('TEMPLATE', :with => 'SOMETHING')
-    click_button('Enter')
-    # save_and_open_page
-    expect(page).to have_content('SOME RESULT')
+describe('String#word_count') do
+
+  it('returns 1 when the word and text are the same single word') do
+    expect(("word").word_count("word")).to(eq(1))
   end
+
 end
