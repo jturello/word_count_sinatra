@@ -35,4 +35,8 @@ describe('String#word_count') do
     expect(("near-term").word_count("near")).to eq(0)
   end
 
+  it('increments count for every instance of word encountered in text (case insensitive) when not immediately preceeded/followed by hyphen, number, or underscore') do
+    expect(("Like, you're not likely to like this dormitory-like life we live here.").word_count("like")).to eq(2)
+  end
+
 end
