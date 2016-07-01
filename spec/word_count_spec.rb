@@ -23,4 +23,16 @@ describe('String#word_count') do
     expect(("near-term").word_count("term")).to eq(0)
   end
 
+  it('returns 0 if word being counted (=years) only appears directly following a number with no space between in text (=2years)') do
+    expect(("2years").word_count("years")).to eq(0)
+  end
+
+  it('returns 0 if word being counted (=years) only appears in text with a preceding underscore with no space (=_years)') do
+    expect(("_years").word_count("years")).to eq(0)
+  end
+
+  it('returns 0 if word counted only appears with trailing hyphen in text') do
+    expect(("near-term").word_count("near")).to eq(0)
+  end
+
 end
