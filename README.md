@@ -9,6 +9,7 @@ Epicodus Ruby Week 1 Code Review
 This website allows a user to enter some text (into Text field) and a word (in the Word to Be Counted field) and on submit the app displays the number of occurrences of 'word' in 'text'
 
 This webpage is hosted at and can be viewed at the following url:
+ * [word-count-sinatra-app](https://word-count-sinatra.herokuapp.com)
 
 ## Setup/Installation Instructions/Requirements
 
